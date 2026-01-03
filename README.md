@@ -1,4 +1,4 @@
-gvfs_automount.py
+gvfs_automount
 =========
 
 Overview
@@ -16,12 +16,9 @@ It's a good idea to pipe stdout to a file or to `/dev/null`, as Python tends to
 freak out if stdout gets closed. From something like an .xsession file you'd
 want to do something like:
 
-    ~/bin/gvfs_automount.py >/dev/null &
+    gvfs_automount >/dev/null &
 
-If you use i3, like I do, you can add something like this to your `.i3/config`
-instead:
+If you use i3, you can add something like this to your `.i3/config` instead:
 
-    exec --no-startup-id ~/bin/gvfs_automount.py >/dev/null
+    exec --no-startup-id gvfs_automount >/dev/null
 
-(These both assume you've put the script in ~/bin -- adjust the path
-accordingly.)
